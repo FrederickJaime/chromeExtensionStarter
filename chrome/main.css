@@ -1,0 +1,8 @@
+html {
+  background: url(/static/november.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+body {
+  margin: 0;
+}
+

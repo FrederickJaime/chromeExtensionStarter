@@ -1,0 +1,9 @@
+{
+  "name": "Dogs of Big Spaceship 2018 Calendar",
+  "version": "1.0",
+  "description": "The dogs of Big Spaceship, one for each month.",
+  "chrome_url_overrides" : {
+    "newtab": "calendar.html"
+  },
+  "manifest_version": 2
+}
