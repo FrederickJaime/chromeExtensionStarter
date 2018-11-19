@@ -57,10 +57,17 @@ function getFullMonth(month) {
   const fullMonth = getFullMonth(month);
   const capitalizedMonth = `${fullMonth.charAt(0).toUpperCase()}${fullMonth.slice(1)}`;
   const html = document.documentElement;
+  //RegEx
+  const firstThreeLetterRegex = /^(\w{3})/g;
+  
+  let monthAbrev = capitalizedMonth.match(firstThreeLetterRegex);
+  console.log(monthAbrev[0].length);
 
   document.title = `New Tab: ${capitalizedMonth}`;
   html.style.backgroundImage = `url(/static/${fullMonth}.jpg)`;
 
+  
+  
 
   let myVar = setInterval(function() {
     myTimer();
@@ -69,7 +76,19 @@ function getFullMonth(month) {
   function myTimer() {
     let d = new Date();
     document.querySelector('.tic-toc').innerHTML = d.toLocaleTimeString();
+    
   }
 
+  // event listener for onready
+  document.addEventListener('DOMContentLoaded', function(){ 
+    document.querySelector('.calander--month').innerHTML = monthAbrev[0];
+  
+  }, false);
+  
+
 })();
+
+
+
+
 
