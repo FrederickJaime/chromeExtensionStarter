@@ -33,14 +33,47 @@ body {
 
 .calander--month {
 
-  display: block;
-  text-align: center;
-  font-size: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 70px;
   font-weight: 700;
   position: relative;
   
   text-transform: uppercase;
-  width: 150px;
+  width: 160px;
 }
+
+.calander--month_letter {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+
+}
+
+.calander--date {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 145px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.calander--date_number {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0 -10px;
+  line-height: 1;
+
+
+}
+
 
 
