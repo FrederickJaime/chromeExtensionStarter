@@ -61,5 +61,15 @@ function getFullMonth(month) {
   document.title = `New Tab: ${capitalizedMonth}`;
   html.style.backgroundImage = `url(/static/${fullMonth}.jpg)`;
 
+
+  let myVar = setInterval(function() {
+    myTimer();
+  }, 1000);
+  
+  function myTimer() {
+    let d = new Date();
+    document.querySelector('.tic-toc').innerHTML = d.toLocaleTimeString();
+  }
+
 })();
 
