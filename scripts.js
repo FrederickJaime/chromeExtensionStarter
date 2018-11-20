@@ -141,21 +141,19 @@ function getTheDay(day) {
 
   }
 
-  let distributeFields = function() {
+  let createSeconds = function() {
     let radius = 150;
     let totalItems = 60;
-
-    let fields = document.querySelectorAll('.calander--clock_second');
-    let container = document.querySelector('.calander--clock_second-holder');
-
+    let secondsMarker = document.querySelectorAll('.calander--clock_second');
     let deg = 0;
-    let width = radius*2, height = radius*2,
-        angle = 0, step = (2*Math.PI) / fields.length;
-
+    let width = radius*2;
+    let height = radius*2;
+    let angle = 0;
+    let step = (2*Math.PI) / secondsMarker.length;
 
  
 
-    Array.prototype.forEach.call(fields, function(el, i){
+    Array.prototype.forEach.call(secondsMarker, function(el, i){
       let x = Math.round(width/2 + radius * Math.cos(angle) - el.offsetWidth/2);
       let y = Math.round(height/2 + radius * Math.sin(angle) - el.offsetHeight/2);
 
@@ -179,7 +177,8 @@ function getTheDay(day) {
       document.querySelector('.calander--clock_second-holder').appendChild( secondMarker );
 
       if( s === 60){
-        distributeFields();
+        createSeconds();
+      
       }
 
     }
