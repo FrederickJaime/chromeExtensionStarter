@@ -133,11 +133,58 @@ function getTheDay(day) {
       // add class
       newSpan.className += classname;
       // append textnode into span
-      newSpan.appendChild(newContent);
+      newSpan.appendChild( newContent );
       // append span to selected partent
-      document.querySelector(appendingTo).appendChild(newSpan);
+      document.querySelector( appendingTo ).appendChild( newSpan );
     
     }
+
+  }
+
+  let distributeFields = function() {
+    let radius = 150;
+    let totalItems = 60;
+
+    let fields = document.querySelectorAll('.calander--clock_second');
+    let container = document.querySelector('.calander--clock_second-holder');
+
+    let deg = 0;
+    let width = radius*2, height = radius*2,
+        angle = 0, step = (2*Math.PI) / fields.length;
+
+
+ 
+
+    Array.prototype.forEach.call(fields, function(el, i){
+      let x = Math.round(width/2 + radius * Math.cos(angle) - el.offsetWidth/2);
+      let y = Math.round(height/2 + radius * Math.sin(angle) - el.offsetHeight/2);
+
+      el.style.top = x+'px';
+      el.style.left = y+'px';
+      el.style.transform = 'rotate('+(-deg)+'deg)';
+
+
+      angle += step;
+      deg += 360/totalItems;
+    });
+
+}
+
+  let createClock = function() {
+
+    for( var s = 1; s < 61 ; s++) {
+      var secondMarker = document.createElement('div');
+      secondMarker.className += 'calander--clock_second';
+
+      document.querySelector('.calander--clock_second-holder').appendChild( secondMarker );
+
+      if( s === 60){
+        distributeFields();
+      }
+
+    }
+    
+
 
   }
 
@@ -145,6 +192,8 @@ function getTheDay(day) {
   // event listener for onready
   document.addEventListener('DOMContentLoaded', function(){ 
     
+
+    createClock();
     textSplit( monthAbrev[0], '.calander--month', 'calander--month_letter');
     textSplit( date, '.calander--date', 'calander--date_number');
     textSplit( day, '.calander--day', 'calander--day_number')
