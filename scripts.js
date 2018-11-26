@@ -140,7 +140,9 @@ function getTheDay(day) {
     }
 
   }
-
+  //
+  // creates second markers in a circle 
+  //
   let createSeconds = function() {
     let radius = 150;
     let totalItems = 60;
@@ -166,7 +168,44 @@ function getTheDay(day) {
       deg += 360/totalItems;
     });
 
-}
+  }
+
+  //
+  //
+  //
+  let setClockTime = function() {
+    let radius = 6;
+    let currentTime = new Date();
+    let second = currentTime.getSeconds() * radius;
+    let minute = currentTime.getMinutes() * radius + Math.floor(second / (radius * 10) * 10) / 10;
+    let hour = currentTime.getHours() * radius * 5 + Math.floor(minute / (radius * 2) * 10) / 10;
+    let secondHand = document.querySelector('.calander--clock_minute');
+
+    let clockInterval = 1000;
+    let before = new Date();
+
+    setInterval(function(){
+      let now = new Date();
+		  let elapsedTime = now.getTime() - before.getTime(); //Fix calculating in inactive tabs
+      let delay = Math.round(elapsedTime/clockInterval);
+
+      second += radius * delay;
+      for(var i=0; i<delay; i++){
+        if( ((second - i) * radius) % (radius * 5) === 0 ){
+          minute += 0.5;
+          if( minute % radius === 0 ){
+            hour += 0.5;
+          }
+        }
+      }
+      
+      secondHand.style.transform = 'rotate('+ second +'deg)';
+      //minuteElm.css('transform', 'rotate(' + minute + 'deg)');
+      //hourElm.css('transform', 'rotate(' + hour + 'deg)');
+      
+      before = new Date();
+    }, clockInterval);
+  }
 
   let createClock = function() {
 
@@ -178,7 +217,7 @@ function getTheDay(day) {
 
       if( s === 60){
         createSeconds();
-      
+        setClockTime();
       }
 
     }
