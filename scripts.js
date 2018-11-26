@@ -107,7 +107,9 @@ function getTheDay(day) {
 
   
   
-
+  //
+  // this is temp, i will delete later.
+  //
   let myVar = setInterval(function() {
     myTimer();
   }, 1000);
