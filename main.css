@@ -143,5 +143,30 @@ body {
   line-height: 1;
 }
 
+.calander--dog {
+  display: block;
+  margin: 100px auto 0 auto;
+  position: relative;
+  width: 160px;
+  
+}
+
+.calander--dog_name {
+  position: relative;
+  line-height: 1;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.calander--dog_info {
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 10px 0 0;
+  position: relative;
+
+}
+
 
 

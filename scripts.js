@@ -223,10 +223,36 @@ function getTheDay(day) {
       }
 
     }
-    
+   
 
 
   }
+
+
+    //
+  //
+  //
+  let getDogInfo = function() {
+
+    let dogInfo = new XMLHttpRequest();
+    dogInfo.open('GET', './data/calander.json',true);
+
+
+    dogInfo.onload = function() {
+      if (dogInfo.status >= 200 && dogInfo.status < 400) {
+        // Success!
+        var data = JSON.parse(dogInfo.responseText);
+        console.log(data);
+      } else {
+        // We reached our target server, but it returned an error
+    
+      }
+    }
+
+    dogInfo.send();
+
+  }
+
 
 
   // event listener for onready
@@ -237,6 +263,7 @@ function getTheDay(day) {
     textSplit( monthAbrev[0], '.calander--month', 'calander--month_letter');
     textSplit( date, '.calander--date', 'calander--date_number');
     textSplit( day, '.calander--day', 'calander--day_number')
+    getDogInfo();
 
   }, false);
   

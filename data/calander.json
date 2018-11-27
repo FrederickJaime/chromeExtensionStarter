@@ -1,11 +1,11 @@
 {
 	"calander": {
-    
+
 	  "january" : [
 
 	  	{
         "name" : "boone",
-        "age" : 6,
+        "age" : "6y",
         "breed" : "big mutt"
       }
       
@@ -13,23 +13,24 @@
     "february" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "nigel",
+        "age" : "4y",
+        "breed" : "bichon frise",
+        "image" : "/static/february.jpg"
       },
       {
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "paquito",
+        "age" : "8y",
+        "breed" : "silky terrier"
       }
 
     ],
     "march" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "patsy",
+        "age" : "10y",
+        "breed" : "french bulldog"
       }
       
     ],
@@ -37,7 +38,7 @@
 
 	  	{
         "name" : "boone",
-        "age" : 6,
+        "age" : "6y",
         "breed" : "big mutt"
       }
       
@@ -45,72 +46,77 @@
     "may" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "mia",
+        "age" : "8m",
+        "breed" : "shih tzu"
+      },
+      {
+        "name" : "sadie",
+        "age" : "7y",
+        "breed" : "miniature schnauzer"
       }
       
     ],
     "june" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "bruce",
+        "age" : "1y",
+        "breed" : "blue great dane"
       }
       
     ],
     "july" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "patsy",
+        "age" : "10y",
+        "breed" : "french bulldog"
       }
       
     ],
     "august" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "chloe",
+        "age" : "8.5y",
+        "breed" : "king charles cavalier spaniel"
       }
       
     ],
     "september" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "Gus",
+        "age" : "6y",
+        "breed" : "chihuahua yorkie corgie"
       }
       
     ],
     "october" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "moo",
+        "age" : "2y",
+        "breed" : "french bulldog"
       }
       
     ],
     "novermber" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "bowie",
+        "age" : "1y",
+        "breed" : "australian labradoodle"
       }
       
     ],
     "december" : [
 
 	  	{
-        "name" : "boone",
-        "age" : 6,
-        "breed" : "big mutt"
+        "name" : "carlie",
+        "age" : "6y",
+        "breed" : "norwich terrier"
       }
       
     ]
