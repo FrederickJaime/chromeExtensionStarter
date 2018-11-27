@@ -6,7 +6,8 @@
 	  	{
         "name" : "boone",
         "age" : "6y",
-        "breed" : "big mutt"
+        "breed" : "big mutt",
+        "class" : "light"
       }
       
     ],
@@ -16,12 +17,13 @@
         "name" : "nigel",
         "age" : "4y",
         "breed" : "bichon frise",
-        "image" : "/static/february.jpg"
+        "class" : "dark"
       },
       {
         "name" : "paquito",
         "age" : "8y",
-        "breed" : "silky terrier"
+        "breed" : "silky terrier",
+        "class" : "dark"
       }
 
     ],
@@ -30,7 +32,8 @@
 	  	{
         "name" : "patsy",
         "age" : "10y",
-        "breed" : "french bulldog"
+        "breed" : "french bulldog",
+        "class" : "dark"
       }
       
     ],
@@ -39,7 +42,8 @@
 	  	{
         "name" : "boone",
         "age" : "6y",
-        "breed" : "big mutt"
+        "breed" : "big mutt",
+        "class" : "dark"
       }
       
     ],
@@ -48,12 +52,14 @@
 	  	{
         "name" : "mia",
         "age" : "8m",
-        "breed" : "shih tzu"
+        "breed" : "shih tzu",
+        "class" : "light"
       },
       {
         "name" : "sadie",
         "age" : "7y",
-        "breed" : "miniature schnauzer"
+        "breed" : "miniature schnauzer",
+        "class" : "light"
       }
       
     ],
@@ -62,7 +68,8 @@
 	  	{
         "name" : "bruce",
         "age" : "1y",
-        "breed" : "blue great dane"
+        "breed" : "blue great dane",
+        "class" : "dark"
       }
       
     ],
@@ -71,7 +78,8 @@
 	  	{
         "name" : "patsy",
         "age" : "10y",
-        "breed" : "french bulldog"
+        "breed" : "french bulldog",
+        "class" : "dark"
       }
       
     ],
@@ -80,7 +88,8 @@
 	  	{
         "name" : "chloe",
         "age" : "8.5y",
-        "breed" : "king charles cavalier spaniel"
+        "breed" : "king charles cavalier spaniel",
+        "class" : "dark"
       }
       
     ],
@@ -89,7 +98,8 @@
 	  	{
         "name" : "Gus",
         "age" : "6y",
-        "breed" : "chihuahua yorkie corgie"
+        "breed" : "chihuahua yorkie corgie",
+        "class" : "dark"
       }
       
     ],
@@ -98,16 +108,18 @@
 	  	{
         "name" : "moo",
         "age" : "2y",
-        "breed" : "french bulldog"
+        "breed" : "french bulldog",
+        "class" : "light"
       }
       
     ],
-    "novermber" : [
+    "november" : [
 
 	  	{
         "name" : "bowie",
         "age" : "1y",
-        "breed" : "australian labradoodle"
+        "breed" : "australian labradoodle",
+        "class" : "dark"
       }
       
     ],
@@ -116,7 +128,8 @@
 	  	{
         "name" : "carlie",
         "age" : "6y",
-        "breed" : "norwich terrier"
+        "breed" : "norwich terrier",
+        "class" : "dark"
       }
       
     ]

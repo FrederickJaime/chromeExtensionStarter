@@ -237,12 +237,30 @@ function getTheDay(day) {
     let dogInfo = new XMLHttpRequest();
     dogInfo.open('GET', './data/calander.json',true);
 
-
+    let dogName = document.querySelector('.calander--dog_name');
+    let dogAge = document.querySelector('.calander--dog_info-age');
+    let dogBreed = document.querySelector('.calander--dog_info-breed');
+    //
+    // on load function for json
+    //
     dogInfo.onload = function() {
       if (dogInfo.status >= 200 && dogInfo.status < 400) {
         // Success!
         var data = JSON.parse(dogInfo.responseText);
-        console.log(data);
+
+        for( let i in data.calander) {
+
+          if(i == fullMonth) {
+
+            dogName.innerHTML = data.calander[i][0].name;
+            dogAge.innerHTML = data.calander[i][0].age;
+            dogBreed.innerHTML = data.calander[i][0].breed;
+
+          }
+          
+        }
+
+        
       } else {
         // We reached our target server, but it returned an error
     
