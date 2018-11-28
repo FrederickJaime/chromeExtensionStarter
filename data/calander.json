@@ -120,6 +120,12 @@
         "age" : "1y",
         "breed" : "australian labradoodle",
         "class" : "dark"
+      },
+      {
+        "name" : "boone",
+        "age" : "6y",
+        "breed" : "big mutt",
+        "class" : "light"
       }
       
     ],

@@ -209,9 +209,9 @@ function getTheDay(day) {
   // create second markers around the clock
   let createClock = function() {
 
-    for( var s = 1; s < 61 ; s++) {
+    for( let s = 1; s < 61 ; s++) {
       // creates div
-      var secondMarker = document.createElement('div');
+      let secondMarker = document.createElement('div');
       // add class to div
       secondMarker.className += 'calander--clock_second';
       // appends div into second holder
@@ -246,16 +246,45 @@ function getTheDay(day) {
     dogInfo.onload = function() {
       if (dogInfo.status >= 200 && dogInfo.status < 400) {
         // Success!
-        var data = JSON.parse(dogInfo.responseText);
+        let data = JSON.parse(dogInfo.responseText);
 
         for( let i in data.calander) {
 
           if(i == fullMonth) {
 
+
+            console.log(data.calander[i].length);
+
+            for( let dog = 0; dog < data.calander[i].length ; dog++) {
+              let dogWrapper = document.createElement('div');
+              dogWrapper.className += 'calander--dog_single';
+
+              let dogName = document.createElement('div');
+              dogName.className += 'calander--dog_name';
+
+              let dogInfo = document.createElement('div');
+              dogInfo.className += 'calander--dog_info';
+
+              let dogAge = document.createElement('span');
+              dogAge.className += 'calander--dog_info-age';
+
+              let dogBreed = document.createElement('span');
+              dogBreed.className += 'calander--dog_info-breed';
+
+              dogName.innerHTML = data.calander[i][0].name;
+              dogAge.innerHTML = data.calander[i][0].age;
+              dogBreed.innerHTML = data.calander[i][0].breed;
+
+              document.querySelector('.calander--dog').appendChild( dogWrapper );
+              dogWrapper.appendChild( dogName ).appendChild( dogInfo );
+              dogInfo.appendChild( dogAge ).appendChild( dogBreed );
+
+            }
+
             dogWrapper.className += " "+data.calander[i][0].class;
-            dogName.innerHTML = data.calander[i][0].name;
-            dogAge.innerHTML = data.calander[i][0].age;
-            dogBreed.innerHTML = data.calander[i][0].breed;
+
+            
+            
 
           }
           
