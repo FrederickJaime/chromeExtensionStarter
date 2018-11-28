@@ -176,10 +176,11 @@ function getTheDay(day) {
   //
   //
   let setClockTime = function() {
+    
+    // clock hand variables
     let secondHand = document.querySelector('.calander--clock_seconds');
     let minuteHand = document.querySelector('.calander--clock_minutes');
     let hourHand = document.querySelector('.calander--clock_hours');
-    
 
     let updateClock = function( hours, minutes, seconds ) {
 
@@ -187,9 +188,12 @@ function getTheDay(day) {
       let minuteDegrees = minutes * 6;
       let secondDegrees = seconds * 6;
 
-      secondHand.style.transform = 'rotate('+ ( secondDegrees - 100 )  +'deg)';
-      minuteHand.style.transform = 'rotate('+ ( minuteDegrees - 100 ) +'deg)';
-      hourHand .style.transform = 'rotate('+ ( hourDegrees - 100)  +'deg)';
+      //
+      // setting clock hand degrees
+      //
+      secondHand.style.transform = 'rotate('+ ( secondDegrees - 0 )  +'deg)';
+      minuteHand.style.transform = 'rotate('+ ( minuteDegrees - 0 ) +'deg)';
+      hourHand.style.transform = 'rotate('+ ( hourDegrees - 0 )  +'deg)';
 
     }
 
@@ -208,42 +212,7 @@ function getTheDay(day) {
 
     setInterval(setClockWithCurrentTime, 1000);
     /*
-    let radius = 6;
-    let currentTime = new Date();
-    let second = currentTime.getSeconds() * radius;
-    let minute = currentTime.getMinutes() * radius + Math.floor(second / ( radius * 10) * 10) / 10;
-    let hour = currentTime.getHours() * radius * 5 + Math.floor(minute / (radius * 2) * 10) / 10;
-    let secondHand = document.querySelector('.calander--clock_seconds');
-    let minuteHand = document.querySelector('.calander--clock_minutes');
 
-    
-
-    let clockInterval = 1000;
-    let before = new Date();
-    */
-    /*
-    setInterval(function(){
-      let now = new Date();
-		  let elapsedTime = now.getTime() - before.getTime(); //Fix calculating in inactive tabs
-      let delay = Math.round(elapsedTime/clockInterval);
-
-      second += radius * delay;
-      for(var i=0; i<delay; i++){
-        if( ((second - i) * radius) % (radius * 5) === 0 ){
-          minute += 0.5;
-         
-          if( minute % radius === 0 ){
-            hour += 0.5;
-          }
-        }
-      }
-      
-      secondHand.style.transform = 'rotate('+ second +'deg)';
-      minuteHand.style.transform = 'rotate('+ minute +'deg)';
-      //hourElm.css('transform', 'rotate(' + hour + 'deg)');
-      
-      before = new Date();
-    }, clockInterval);
     */
   }
 
@@ -254,6 +223,10 @@ function getTheDay(day) {
       secondMarker.className += 'calander--clock_second';
 
       document.querySelector('.calander--clock_second-holder').appendChild( secondMarker );
+
+      if( s % 30 === 0){
+        secondMarker.className += ' calander--clock_quarter';
+      }
 
       if( s === 60){
         createSeconds();
