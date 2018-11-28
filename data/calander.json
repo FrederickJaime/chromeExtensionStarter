@@ -1,144 +1,147 @@
 {
 	"calander": {
 
-	  "january" : [
+	  "january" : {
+      "class" : "light",
+      "dogs" : [
+        {
+          "name" : "boone",
+          "age" : "6y",
+          "breed" : "big mutt"
+        }
+      ]
 
-	  	{
-        "name" : "boone",
-        "age" : "6y",
-        "breed" : "big mutt",
-        "class" : "light"
-      }
-      
-    ],
-    "february" : [
+    },
+    "february" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "nigel",
+          "age" : "4y",
+          "breed" : "bichon frise"
+        },
+        {
+          "name" : "paquito",
+          "age" : "8y",
+          "breed" : "silky terrier"
+        }
+      ]
+    },
+    "march" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "patsy",
+          "age" : "10y",
+          "breed" : "french bulldog"
+        }
+      ]      
+    },
+    "april" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "boone",
+          "age" : "6y",
+          "breed" : "big mutt"
+        }
+      ]
+    },
+    "may" : {
+      "class" : "light",
+      "dogs" : [
+        {
+          "name" : "mia",
+          "age" : "8m",
+          "breed" : "shih tzu"
+        },
+        {
+          "name" : "sadie",
+          "age" : "7y",
+          "breed" : "miniature schnauzer"
+        }
+      ]
+    },
+    "june" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "bruce",
+          "age" : "1y",
+          "breed" : "blue great dane"
+        }
+      ]
 
-	  	{
-        "name" : "nigel",
-        "age" : "4y",
-        "breed" : "bichon frise",
-        "class" : "dark"
-      },
-      {
-        "name" : "paquito",
-        "age" : "8y",
-        "breed" : "silky terrier",
-        "class" : "dark"
-      }
-
-    ],
-    "march" : [
-
-	  	{
-        "name" : "patsy",
-        "age" : "10y",
-        "breed" : "french bulldog",
-        "class" : "dark"
-      }
-      
-    ],
-    "april" : [
-
-	  	{
-        "name" : "boone",
-        "age" : "6y",
-        "breed" : "big mutt",
-        "class" : "dark"
-      }
-      
-    ],
-    "may" : [
-
-	  	{
-        "name" : "mia",
-        "age" : "8m",
-        "breed" : "shih tzu",
-        "class" : "light"
-      },
-      {
-        "name" : "sadie",
-        "age" : "7y",
-        "breed" : "miniature schnauzer",
-        "class" : "light"
-      }
-      
-    ],
-    "june" : [
-
-	  	{
-        "name" : "bruce",
-        "age" : "1y",
-        "breed" : "blue great dane",
-        "class" : "dark"
-      }
-      
-    ],
-    "july" : [
-
-	  	{
-        "name" : "patsy",
-        "age" : "10y",
-        "breed" : "french bulldog",
-        "class" : "dark"
-      }
-      
-    ],
-    "august" : [
-
-	  	{
-        "name" : "chloe",
-        "age" : "8.5y",
-        "breed" : "king charles cavalier spaniel",
-        "class" : "dark"
-      }
-      
-    ],
-    "september" : [
-
-	  	{
-        "name" : "Gus",
-        "age" : "6y",
-        "breed" : "chihuahua yorkie corgie",
-        "class" : "dark"
-      }
-      
-    ],
-    "october" : [
-
-	  	{
-        "name" : "moo",
-        "age" : "2y",
-        "breed" : "french bulldog",
-        "class" : "light"
-      }
-      
-    ],
-    "november" : [
-
-	  	{
-        "name" : "bowie",
-        "age" : "1y",
-        "breed" : "australian labradoodle",
-        "class" : "dark"
-      },
-      {
-        "name" : "boone",
-        "age" : "6y",
-        "breed" : "big mutt",
-        "class" : "light"
-      }
-      
-    ],
-    "december" : [
-
-	  	{
-        "name" : "carlie",
-        "age" : "6y",
-        "breed" : "norwich terrier",
-        "class" : "dark"
-      }
-      
-    ]
+    },
+    "july" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "patsy",
+          "age" : "10y",
+          "breed" : "french bulldog"
+        }
+      ]
+  
+    },
+    "august" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "chloe",
+          "age" : "8.5y",
+          "breed" : "king charles cavalier spaniel"
+        }
+      ]
+    },
+    "september" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "Gus",
+          "age" : "6y",
+          "breed" : "chihuahua yorkie corgie"
+        }
+      ]
+    },
+    "october" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "moo",
+          "age" : "2y",
+          "breed" : "french bulldog"
+        }
+      ]
+    },
+    "november" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "bowie",
+          "age" : "1y",
+          "breed" : "australian labradoodle",
+          "class" : "dark"
+        },
+        {
+          "name" : "boone",
+          "age" : "6y",
+          "breed" : "big mutt",
+          "class" : "light"
+        }
+      ]
+    },
+    "december" : {
+      "class" : "dark",
+      "dogs" : [
+        {
+          "name" : "carlie",
+          "age" : "6y",
+          "breed" : "norwich terrier",
+          "class" : "dark"
+        }
+      ]
+    }
 
 	}
 }

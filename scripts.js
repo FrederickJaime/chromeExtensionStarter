@@ -247,15 +247,13 @@ function getTheDay(day) {
       if (dogInfo.status >= 200 && dogInfo.status < 400) {
         // Success!
         let data = JSON.parse(dogInfo.responseText);
-
+        //loop to search for current month
         for( let i in data.calander) {
-
+          //if correct month do this
           if(i == fullMonth) {
-
-
-            console.log(data.calander[i].length);
-
-            for( let dog = 0; dog < data.calander[i].length ; dog++) {
+            //looping to get all dogs available in array of dogs
+;            for( let dog = 0; dog < data.calander[i].dogs.length ; dog++) {
+              // creating elements to add information about each dog
               let dogWrapper = document.createElement('div');
               dogWrapper.className += 'calander--dog_single';
 
@@ -270,27 +268,22 @@ function getTheDay(day) {
 
               let dogBreed = document.createElement('span');
               dogBreed.className += 'calander--dog_info-breed';
-
-              dogName.innerHTML = data.calander[i][0].name;
-              dogAge.innerHTML = data.calander[i][0].age;
-              dogBreed.innerHTML = data.calander[i][0].breed;
-
+              //getting info of dog
+              dogName.innerHTML = data.calander[i].dogs[dog].name;
+              dogAge.innerHTML = data.calander[i].dogs[dog].age;
+              dogBreed.innerHTML = data.calander[i].dogs[dog].breed;
+              // appending items into dom
               document.querySelector('.calander--dog').appendChild( dogWrapper );
               dogWrapper.appendChild( dogName ).appendChild( dogInfo );
               dogInfo.appendChild( dogAge ).appendChild( dogBreed );
 
             }
-
-            dogWrapper.className += " "+data.calander[i][0].class;
-
-            
-            
-
+            //getting class to determine color of texted based on dark image vs light image
+            dogWrapper.className += " "+data.calander[i].class;
           }
           
         }
 
-        
       } else {
         // We reached our target server, but it returned an error
     
