@@ -176,16 +176,52 @@ function getTheDay(day) {
   //
   //
   let setClockTime = function() {
+    let secondHand = document.querySelector('.calander--clock_seconds');
+    let minuteHand = document.querySelector('.calander--clock_minutes');
+    let hourHand = document.querySelector('.calander--clock_hours');
+    
+
+    let updateClock = function( hours, minutes, seconds ) {
+
+      let hourDegrees = hours * 30;
+      let minuteDegrees = minutes * 6;
+      let secondDegrees = seconds * 6;
+
+      secondHand.style.transform = 'rotate('+ ( secondDegrees - 100 )  +'deg)';
+      minuteHand.style.transform = 'rotate('+ ( minuteDegrees - 100 ) +'deg)';
+      hourHand .style.transform = 'rotate('+ ( hourDegrees - 100)  +'deg)';
+
+    }
+
+    let setClockWithCurrentTime = function() {
+      let date = new Date();
+      let hours = ((date.getHours() + 11) % 12 + 1);
+      let minutes = date.getMinutes();
+      let seconds = date.getSeconds();
+
+      updateClock(hours, minutes, seconds);
+
+    }
+
+
+  
+
+    setInterval(setClockWithCurrentTime, 1000);
+    /*
     let radius = 6;
     let currentTime = new Date();
     let second = currentTime.getSeconds() * radius;
-    let minute = currentTime.getMinutes() * radius + Math.floor(second / (radius * 10) * 10) / 10;
+    let minute = currentTime.getMinutes() * radius + Math.floor(second / ( radius * 10) * 10) / 10;
     let hour = currentTime.getHours() * radius * 5 + Math.floor(minute / (radius * 2) * 10) / 10;
-    let secondHand = document.querySelector('.calander--clock_minute');
+    let secondHand = document.querySelector('.calander--clock_seconds');
+    let minuteHand = document.querySelector('.calander--clock_minutes');
+
+    
 
     let clockInterval = 1000;
     let before = new Date();
-
+    */
+    /*
     setInterval(function(){
       let now = new Date();
 		  let elapsedTime = now.getTime() - before.getTime(); //Fix calculating in inactive tabs
@@ -195,6 +231,7 @@ function getTheDay(day) {
       for(var i=0; i<delay; i++){
         if( ((second - i) * radius) % (radius * 5) === 0 ){
           minute += 0.5;
+         
           if( minute % radius === 0 ){
             hour += 0.5;
           }
@@ -202,11 +239,12 @@ function getTheDay(day) {
       }
       
       secondHand.style.transform = 'rotate('+ second +'deg)';
-      //minuteElm.css('transform', 'rotate(' + minute + 'deg)');
+      minuteHand.style.transform = 'rotate('+ minute +'deg)';
       //hourElm.css('transform', 'rotate(' + hour + 'deg)');
       
       before = new Date();
     }, clockInterval);
+    */
   }
 
   let createClock = function() {
@@ -237,9 +275,11 @@ function getTheDay(day) {
     let dogInfo = new XMLHttpRequest();
     dogInfo.open('GET', './data/calander.json',true);
 
+    let dogWrapper = document.querySelector('.calander--wrapper');
     let dogName = document.querySelector('.calander--dog_name');
     let dogAge = document.querySelector('.calander--dog_info-age');
     let dogBreed = document.querySelector('.calander--dog_info-breed');
+
     //
     // on load function for json
     //
@@ -252,6 +292,7 @@ function getTheDay(day) {
 
           if(i == fullMonth) {
 
+            dogWrapper.className += " "+data.calander[i][0].class;
             dogName.innerHTML = data.calander[i][0].name;
             dogAge.innerHTML = data.calander[i][0].age;
             dogBreed.innerHTML = data.calander[i][0].breed;
