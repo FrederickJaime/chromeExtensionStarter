@@ -1,7 +1,8 @@
 html {
-  background: url() no-repeat center center fixed;
+  background: url() no-repeat left top fixed;
   background-size: cover;
   font-family: 'Open Sans Condensed', sans-serif;
+  min-height: 625px;
 }
 body {
   margin: 0;
