@@ -88,7 +88,7 @@ body {
   background-color: #222;
   transform-origin: bottom;
   transform: rotate(180deg);
-  z-index: 3;
+  z-index: 1;
 }
 
 .calander--clock_seconds-end {
@@ -99,7 +99,7 @@ body {
   bottom: 0%;
   left: 0%;
   height: 10px;
-  transform: translate( -50%, 50%);
+  transform: translate( -50%, -60%);
   width: 10px;
 
 }
@@ -108,17 +108,36 @@ body {
 
   position: absolute;
   height: 35%;
-  width: 8px;
+  width: 6px;
   margin: auto;
   top: -35%;
   left: 0;
   bottom: 0;
   right: 0;
   border-radius: 0px;
-  background-color: #444;
-  transform-origin: bottom;
+  background-color: transparent;
+  transform-origin: bottom center;
   transform: rotate(90deg);
-  z-index: 2;
+  z-index: 3;
+
+}
+
+.calander--clock_minutes ::after {
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+  height: 250px;
+  display: block;
+  background: red;
+}
+
+.calander--clock_minutes_hand {
+  position: absolute;
+  bottom: 0;
+  width: 45px;
+  height: auto;;
+  transform: translate(-45% , 7%);
+  
 }
 
 .calander--clock_hours {
@@ -131,10 +150,18 @@ body {
   bottom: 0;
   right: 0;
   border-radius: 0px;
-  background-color: #666;
+  background-color: transparent;
   transform-origin: bottom;
   transform: rotate(0deg);
-  z-index: 1;
+  z-index: 2;
+}
+.calander--clock_hours_hand {
+  position: absolute;
+  bottom: 0;
+  width: 45px;
+  height: auto;;
+  transform: translate(-38% , 9%);
+  
 }
 
 .calander--month {
