@@ -130,7 +130,7 @@ function getTheDay(day) {
 
   }
   //
-  // creates second markers in a circle 
+  // placessecond markers in a circle 
   //
   let createSeconds = function() {
     let radius = 150;
@@ -143,7 +143,7 @@ function getTheDay(day) {
     let step = (2*Math.PI) / secondsMarker.length;
 
  
-
+    // looping thru all items to be placed around clock
     Array.prototype.forEach.call(secondsMarker, function(el, i){
       let x = Math.round(width/2 + radius * Math.cos(angle) - el.offsetWidth/2);
       let y = Math.round(height/2 + radius * Math.sin(angle) - el.offsetHeight/2);
@@ -169,8 +169,10 @@ function getTheDay(day) {
     let minuteHand = document.querySelector('.calander--clock_minutes');
     let hourHand = document.querySelector('.calander--clock_hours');
 
+    // function to set clockhands based on current time function
     let updateClock = function( hours, minutes, seconds ) {
 
+      // setting degrees 
       let hourDegrees = hours * 30;
       let minuteDegrees = minutes * 6;
       let secondDegrees = seconds * 6;
@@ -178,12 +180,13 @@ function getTheDay(day) {
       //
       // setting clock hand degrees
       //
-      secondHand.style.transform = 'rotate('+ ( secondDegrees - 0 )  +'deg)';
-      minuteHand.style.transform = 'rotate('+ ( minuteDegrees - 0 ) +'deg)';
-      hourHand.style.transform = 'rotate('+ ( hourDegrees - 0 )  +'deg)';
+      secondHand.style.transform = 'rotate('+ ( secondDegrees )  +'deg)';
+      minuteHand.style.transform = 'rotate('+ ( minuteDegrees ) +'deg)';
+      hourHand.style.transform = 'rotate('+ ( hourDegrees )  +'deg)';
 
     }
 
+    // function to get current time | hour : minutes : seconds
     let setClockWithCurrentTime = function() {
       let date = new Date();
       let hours = ((date.getHours() + 11) % 12 + 1);
@@ -203,29 +206,28 @@ function getTheDay(day) {
     */
   }
 
+  // create second markers around the clock
   let createClock = function() {
 
     for( var s = 1; s < 61 ; s++) {
+      // creates div
       var secondMarker = document.createElement('div');
+      // add class to div
       secondMarker.className += 'calander--clock_second';
-
+      // appends div into second holder
       document.querySelector('.calander--clock_second-holder').appendChild( secondMarker );
-
-
-
+      //callback after loop is done
       if( s === 60){
         createSeconds();
         setClockTime();
       }
 
     }
-   
-
 
   }
 
 
-    //
+  //
   //
   //
   let getDogInfo = function() {
