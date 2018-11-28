@@ -106,19 +106,6 @@ function getTheDay(day) {
   html.style.backgroundImage = `url(/static/${fullMonth}.jpg)`;
 
   
-  
-  //
-  // this is temp, i will delete later.
-  //
-  let myVar = setInterval(function() {
-    myTimer();
-  }, 1000);
-  
-  function myTimer() {
-    let d = new Date();
-    document.querySelector('.tic-toc').innerHTML = d.toLocaleTimeString();
-    
-  }
 
   //
   // function to append items as individual items
@@ -224,9 +211,7 @@ function getTheDay(day) {
 
       document.querySelector('.calander--clock_second-holder').appendChild( secondMarker );
 
-      if( s % 30 === 0){
-        secondMarker.className += ' calander--clock_quarter';
-      }
+
 
       if( s === 60){
         createSeconds();
