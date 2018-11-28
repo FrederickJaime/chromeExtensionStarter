@@ -271,7 +271,7 @@ function getTheDay(day) {
               //getting info of dog
               dogName.innerHTML = data.calander[i].dogs[dog].name;
               dogAge.innerHTML = data.calander[i].dogs[dog].age;
-              dogBreed.innerHTML = data.calander[i].dogs[dog].breed;
+              dogBreed.innerHTML = ' | '+data.calander[i].dogs[dog].breed;
               // appending items into dom
               document.querySelector('.calander--dog').appendChild( dogWrapper );
               dogWrapper.appendChild( dogName ).appendChild( dogInfo );
