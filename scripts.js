@@ -51,28 +51,29 @@ function getTheDay(day) {
   
   switch(day) {
     case 1:
-      fullMonth = 'monday';
+      theDay = 'sunday';
       break;
     case 2:
-      fullMonth = 'tuesday';
+      theDay = 'monday';
       break;
     case 3:
-      fullMonth = 'wednesday';
+      theDay = 'tuesday';
       break;
     case 4:
-      fullMonth = 'thursday';
+      theDay= 'wednesday';
       break;
     case 5:
-      fullMonth = 'friday';
+      theDay = 'thursday';
       break;
     case 6:
-      fullMonth = 'saturday';
+      theDay = 'friday';
       break;
     case 7:
-      fullMonth = 'sunday';
+      theDay = 'saturday';
       break;
+
     default:
-      fullMonth= 'monday';
+      theDay = 'monday';
   }
 
   return theDay;
@@ -82,8 +83,9 @@ function getTheDay(day) {
 (function setCalendarImage() {
   const today = new Date();
   let month = today.getMonth() + 1; // January is 0
-  let date = String(today.getDate());
-  let day = today.getDay() + 1;
+  let date = today.getDate() < 10 ? "0"+String(today.getDate()) : String(today.getDate()) ;
+  let day = getTheDay(today.getDay() + 1);
+  
 
   if (month < 10) {
     month = `0${month}`; 
@@ -142,10 +144,10 @@ function getTheDay(day) {
 
   // event listener for onready
   document.addEventListener('DOMContentLoaded', function(){ 
-
+    
     textSplit( monthAbrev[0], '.calander--month', 'calander--month_letter');
     textSplit( date, '.calander--date', 'calander--date_number');
-    //calMonth();
+    textSplit( day, '.calander--day', 'calander--day_number')
 
   }, false);
   

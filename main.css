@@ -18,6 +18,7 @@ body {
   position: absolute;
   top: 80px;
   height: auto;
+  width: 160px;
 }
 
 .calander--clock {
@@ -69,10 +70,30 @@ body {
   position: relative;
   display: block;
   padding: 0;
-  margin: 0 -10px;
+  margin: 0px -10px 0 -10px;
   line-height: 1;
+}
 
+.calander--day {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1;
+  width: 154px;
+}
 
+.calander--day_number {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
 }
 
 
